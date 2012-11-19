@@ -8,13 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ThreadTest.h"
+
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        // insert code here...
         NSLog(@"Hello, World!");
+        
+        ThreadTest *test = [[ThreadTest alloc] init];
+        [test start];
+        
+        sleep(3.0);
+        
+        NSLog(@"Game over");
         
     }
     return 0;
